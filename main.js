@@ -8,6 +8,7 @@ const dummy_host = "http://0.0.0.0:6002" // or whatever powergate instance you w
 
 const secret_host_settings = "./pow_host.json"
 // {host: <url>}
+// This is done to protect the url of the hosted powergate instance
 const host = fs.existsSync(secret_host_settings) ? JSON.parse(fs.readFileSync(secret_host_settings)).host : dummy_host;
 
 const pow = createPow({ host })
