@@ -4,18 +4,22 @@ const { createPow } = pgc;
 const fs = require('fs');
 
 // $ while sleep 100; do   node main.js; done
-const host = "http://0.0.0.0:6002" // or whatever powergate instance you want
+const dummy_host = "http://0.0.0.0:6002" // or whatever powergate instance you want
+
+const secret_host_settings = "./pow_host.json"
+// {host: <url>}
+const host = fs.existsSync(secret_host_settings) ? JSON.parse(fs.readFileSync(secret_host_settings)).host : dummy_host;
 
 const pow = createPow({ host })
 main()
 
 async function main() {
-    const filesyncpath = 'peersync4.json'
+    const filesyncpath = 'peersync3.json'
     const { peersList } = await pow.net.peers()
     
     console.log(peersList)
 
-    let jsondata = fs.existsSync(filesyncpath) ? JSON.parse(fs.readFileSync(filesyncpath)) : [];
+    let jsondata = fs.existsSync(filesyncpath) ? JSON.parse(fs.readFileSync(filesyncpath)) : {};
     jsondata = dedupe(jsondata.concat(peersList))
 
     fs.writeFileSync(filesyncpath, JSON.stringify(jsondata), 'utf8');
