@@ -1,10 +1,11 @@
 const axios = require('axios');
 const fs = require('fs');
 
-const pinata_api_key = "8aef24ddf09c0c08b8d7"
-const pinata_secret_api_key = "47f6434462c32cb9416f3e7202446955566540417c60b1c895e5bad357201f11"
 const settings_path = "./pow_host.json" // {host: <url>}
 const settings = fs.existsSync(settings_path) ? JSON.parse(fs.readFileSync(settings_path)) : dummy_host;
+
+const pinata_api_key = settings.pinata_api_key
+const pinata_secret_api_key = settings.pinata_api_key
 let jsondata = fs.existsSync(settings.data_path) ? JSON.parse(fs.readFileSync(settings.data_path)) : {};
 
 
