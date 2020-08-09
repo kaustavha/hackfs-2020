@@ -8,8 +8,8 @@ In a python notebook environment the data is then ETL’d in and visualizations 
 The visualizations use a python library called Altair. 
 
 # Notebook:  
-[Databricks notebook](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3253931653984225/3067978290237904/6896986926512915/latest.html)
-[Google collab noteook - .ipynb](https://colab.research.google.com/drive/131tDhrwutV6OvOrAilcMJhlH3jQ1Auun?usp=sharing)
+- [Databricks notebook](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3253931653984225/3067978290237904/6896986926512915/latest.html)    
+- [Google collab noteook - .ipynb](https://colab.research.google.com/drive/131tDhrwutV6OvOrAilcMJhlH3jQ1Auun?usp=sharing)   
 
 # Quickstart:
 - You can run the JS CLI app which fetches peering info via:   
