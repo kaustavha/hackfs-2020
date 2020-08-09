@@ -52,3 +52,8 @@ These images from the notebook vizualize the IPFS/Filecoin network via a Textile
 * We generate a map projection using a base vega dataset then plot the peers on it based on latitude and longitude 
 * The data is also aggregated via country
 * Since Altair generates a vega spec, they can be interactive and can be transformed into HTML5, or pictures
+
+# Data storage providers
+- github
+- pinata cloud - pinata.js
+- textile powergate - ipfs_connect_cs
