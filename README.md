@@ -9,9 +9,10 @@ The visualizations use a python library called Altair.
 
 # Notebook:  
 [Databricks notebook](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/3253931653984225/3067978290237904/6896986926512915/latest.html)
+[Google collab noteook - .ipynb](https://colab.research.google.com/drive/131tDhrwutV6OvOrAilcMJhlH3jQ1Auun?usp=sharing)
 
 # Quickstart:
-- You can run the JS CLI app via:   
+- You can run the JS CLI app which fetches peering info via:   
 
 ```
 # install dependencies
@@ -20,8 +21,24 @@ npm i
 node main.js
 ```
 This will fetch data from a Textile powergate node via the JS client liraries. 
-You will either need a locally running node or need to modify the script with a valid remote URL.  
-
+You will either need a locally running node or need to modify the script with a valid remote URL.   
+If using a remote url you can create a settings file called `pow_host.json` like so:     
+```
+{
+    "host": "power gate url",
+    "data_path": "peersync3.json",
+    "pinata_api_key": "<>",
+    "pinata_secret_api_key": "<>"
+}
+```
+For the pinata JSON file send:
+```
+node pinata.js
+```
+For powergate based ipfs file send using FFS
+```
+node ipfs_connect_cs/js_cli/pow.js <file path>
+```
 
 # Vizualization / map of the filecoin network overlayed on a world map
 - peers.json
