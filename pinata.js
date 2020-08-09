@@ -5,7 +5,7 @@ const settings_path = "./pow_host.json" // {host: <url>}
 const settings = fs.existsSync(settings_path) ? JSON.parse(fs.readFileSync(settings_path)) : dummy_host;
 
 const pinata_api_key = settings.pinata_api_key
-const pinata_secret_api_key = settings.pinata_api_key
+const pinata_secret_api_key = settings.pinata_secret_api_key
 let jsondata = fs.existsSync(settings.data_path) ? JSON.parse(fs.readFileSync(settings.data_path)) : {};
 
 
